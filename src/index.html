@@ -1,13 +1,240 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang=""> 
 <head>
-  <meta charset="utf-8">
-  <title>Pk</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RMS Online Admission Application Form - CET 2019-2020 </title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="./">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+   <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/scss/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-23581568-13');
+    </script>
+    <script>
+        function validateEmail(emailField){
+      var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+      if (reg.test(emailField.value) == false) 
+      {
+          alert('Invalid Email Address');
+    document.getElementById('emailField').focus();
+          //return false;
+      }
+    
+      return true;
+    
+    }
+    function myFunction() 
+    {
+    var txt;
+    var person = prompt("Please enter your ref. mobile:", "997113232");
+    if (person == null || person == "") 
+    {
+      txt = "Mention the correct mobile code or click on Resent";
+      
+    } else 
+    {
+      href='Success-Form-Submissions.html';
+    }
+    document.getElementById("demo").innerHTML = txt;
+    }
+    function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+    }
+    </script>
+    
+    
+    <script>
+        function Clear()
+      {
+        document.getElementById('fname').value="";
+        document.getElementById('fname').focus();
+      }
+      
+      </script>
+      <script>
+      function Clear1()
+      {
+        document.getElementById('name').value="";
+        document.getElementById('name').focus();
+      }
+      
+      </script>
+        <script>
+      function validateForm()
+      {
+      var x=document.forms["result"]["name"].value;
+      if (x==null || x=="")
+        {
+        //alert("Roll number must be filled out");
+        alert("Name must be filled");
+        return false;
+        }
+        var d=document.forms["result"]["nf-password"].value;
+      if (d==null || d=="")
+        {
+        alert("Class must be filled out");
+        return false;
+        }
+        var y=document.forms["result"]["date"].value;
+      if (y==null || y=="")
+        {
+        alert("Date of Birth must be filled out");
+        return false;
+        }
+        var z=document.forms["result"]["month"].value;
+      if (z==null || z=="")
+        {
+        alert("Month must be selected");
+        return false;
+        }
+        var w=document.forms["result"]["year"].value;
+      if (w==null || w=="")
+        {
+        alert("Year must be selected");
+        return false;
+        }
+      
+      }
+      </script>
+      
+      <script language="Javascript" type="text/javascript">
+      
+              function onlyAlphabets(e, t) {
+                  try {
+                      if (window.event) {
+                          var charCode = window.event.keyCode;
+                      }
+                      else if (e) {
+                          var charCode = e.which;
+                      }
+                      else { return true; }
+                      if ((charCode >= 65 && charCode <= 123) || (charCode ==32 && charCode !=0))
+                          return true;
+                      else
+                          return false;
+                  }
+                  catch (err) {
+                      alert(err.Description);
+                  }
+              }
+      
+          function isNumber(evt) {
+          evt = (evt) ? evt : window.event;
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+              return false;
+          }
+          return true;
+      }
+      
+      function checkTextField(field) {
+        document.getElementById("error").innerText =
+          (field.value === "") ? "Field is empty." : "";
+      }
+      function checkTextField1(field) {
+        document.getElementById("error1").innerText =
+          (field.value === "") ? "Field is empty." : "";
+      }
+      function checkTextField2(field) {
+        document.getElementById("error2").innerText =
+          (field.value === "") ? "Field is empty." : "";
+      }
+      
+      function validateEmail(emailField){
+              var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+      
+              if (reg.test(emailField.value) == false) 
+              {
+                  alert('Invalid Email Address');
+            document.getElementById('emailField').focus();
+                  //return false;
+              }
+      
+              return true;
+      
+      }
+          </script>
+
+
+          <script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<script type='text/javascript'>
+function preview_image1(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image1');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<script type='text/javascript'>
+function preview_image2(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image2');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<script type='text/javascript'>
+function preview_image3(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image3');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+ 
 </head>
+
 <body>
   <app-root></app-root>
 </body>

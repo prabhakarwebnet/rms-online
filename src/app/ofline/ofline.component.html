@@ -1,0 +1,104 @@
+ <div class="sufee-login d-flex align-content-center flex-wrap">
+      <div class="container">
+          <div class="login-content">
+              <div class="login-logo">
+                  <a href="student-login.html">
+                      <img class="align-content" src="./assets/images/rms-logo.gif" alt="">
+                  </a>
+              </div>
+              <div class="login-form">
+                  <form [formGroup]="form">
+                          <div class="form-group">
+                                  <label>Name</label>
+                                  <input type="Name" name="Name" class="form-control" placeholder="Name" >
+                              </div>
+                      <div class="form-group">
+                          <label>Email address</label>
+                          <input type="email" onblur="validateEmail(this);" name="emailField" class="form-control" placeholder="Email" formControlName="email">
+                      </div>
+                      <div class="form-group">
+                          <label>Mobile</label>
+                          <input type="text" id="input1-group1"  maxlength="10" name="input1-group1" placeholder="Mobile Number" formControlName="mobile" class="form-control" onkeypress="return isNumber(event)">
+
+                      </div>
+                      <div class="checkbox">
+                                                    
+                      </div>
+                      <input type="button" class="btn btn-success btn-flat m-b-30 m-t-30" [disabled]="!form.valid" value="Submit" data-toggle="modal" data-target="#myModal" />
+                      <p id="demo"></p>
+
+
+                      
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <form [formGroup]="form1">
+        <!-- Modal Header -->
+        <div  class="modal-header" center>
+    
+          <h4 class="modal-title">Enter Your Otp</h4>
+     
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Otp:</label>
+            <input type="text" formControlName="otp" onkeypress="return isNumber(event)" maxlength="6" class="form-control" id="recipient-name">
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <input type="button" class="btn btn-primary" [disabled]="!form1.valid" value= "Submit" [routerLink]="['/Download']" data-dismiss="modal"  />
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+        function validateEmail(emailField){
+      var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+      if (reg.test(emailField.value) == false) 
+      {
+          alert('Invalid Email Address');
+    document.getElementById('emailField').focus();
+          //return false;
+      }
+
+      return true;
+
+}
+function myFunction() 
+{
+  var txt;
+  var person = prompt("Please enter your ref. mobile:", "997113232");
+  if (person == null || person == "") 
+  {
+      txt = "Mention the correct mobile code or click on Resent";
+      
+  } else 
+  {
+      href='Success-Form-Submissions.html';
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+  }
+  return true;
+}
+</script>

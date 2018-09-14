@@ -1,0 +1,840 @@
+
+  <aside id="left-panel" class="left-panel">
+      <nav class="navbar navbar-expand-sm navbar-default">
+
+          <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-bars"></i>
+              </button>
+          </div>
+
+          <div id="main-menu" class="main-menu collapse navbar-collapse">
+              
+          </div><!-- /.navbar-collapse -->
+      </nav>
+  </aside><!-- /#left-panel -->
+
+  <!-- Left Panel -->
+
+  <!-- Right Panel -->
+
+  <div id="right-panel" class="right-panel">
+
+      <!-- Header-->
+      <header id="header" class="header">
+
+          <div class="header-menu">
+
+              <div class="col-sm-7">
+                  <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                  <div class="header-left">
+                   
+                      <div class="form-inline">
+                         
+                      </div>
+
+                      <div class="dropdown for-notification">
+                       
+                        <img src="./assets/images/rms-logo.gif" style="height: 90px;">
+                      </div>
+
+                      <div class="dropdown for-message">
+                      
+                        <div class="dropdown-menu" aria-labelledby="message">
+                       
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-5">
+                
+
+                
+
+              </div>
+          </div>
+
+      </header><!-- /header -->
+      <!-- Header-->
+
+      <div class="breadcrumbs">
+          <div class="col-xl-12" style="background: #f7d6bf;">
+              
+      <div class="page-header float-left col-xl-12" style="background: #f7d6bf;">
+                  <div class="page-title">
+                      <h1>Application Form for Admission to RMS at Chail, Ajmer, Belgaum, Bangalore & Dholpur for Academic Session 2019-2020</h1>
+                  </div>
+              </div>
+      
+          </div>
+
+      </div>
+
+      <div class="content mt-3">
+          <div class="animated fadeIn">
+
+
+              <div class="row">
+              
+
+                <div class="col-lg-9">
+                  <div class="card">
+                    <div class="card-header" style="background: #f7d6bf;">
+                      <strong>Student Registration Form (छात्र पंजीकरण फॉर्म)</strong>
+                    </div>
+                    <div class="card-body card-block">
+
+
+
+             <form #f="ngForm" action="" method="post" name="result" method="post" enctype="multipart/form-data" class="form-horizontal">
+              
+              <div class="row form-group" >
+                  <div class="col col-md-3"><label for="text-input" class=" form-control-label">Enter Student Name * <br> प्रांर्थी का नाम</label></div>
+                  <div class="col-12 col-md-6"><input [(ngModel)]="user.name" name="name"  id="name" ngControl="name" 
+                    name="ngForm" #name  type="text" style="text-transform:uppercase" class="form-control" onkeypress="return onlyAlphabets(event,this);" onblur="checkTextField(this);"><span class="help-block">Enter name as in your school records</span></div>
+    <p id="error" style="color:red;"></p>
+                </div>
+                        <div class="row form-group" >
+                          <div class="col col-md-3"><label for="text-input" class=" form-control-label">Enter Father Name *<br> पिता का नाम</label></div>
+                          <div class="col-12 col-md-6"><input [(ngModel)]="user.fatherName" name="fatherName" id="fatherName" ngControl="fathername" 
+                            fathername="ngForm" #fathername type="text"  style="text-transform:uppercase" id="fatherName" class="form-control" onkeypress="return onlyAlphabets(event,this);" onblur="checkTextField1(this);"></div>
+            <p id="error1" style="color:red;"></p>
+                        </div>
+            
+          <div class="row form-group" >
+                          <div class="col col-md-3"><label for="text-input" class=" form-control-label">Enter Mother Name *<br>माता का नाम</label></div>
+                          <div class="col-12 col-md-6"><input [(ngModel)]="user.motherName" name="motherName" id="motherName" ngControl="mothername" 
+                            mothername="ngForm" #mothername type="text" style="text-transform:uppercase" name="motherName" id="motherName" class="form-control" onkeypress="return onlyAlphabets(event,this);"></div>
+                        </div>
+          
+          <!-- <div class="row form-group">
+                          <div class="col col-md-3"><label class=" form-control-label">Admission for Class *<br> कक्षा के लिए प्रवेश</label></div>
+                          <div class="col col-md-9">
+                           <div class="form-check-inline form-check"  >
+                              <label for="inline-radio1" class="form-check-label ">
+                                <input type="radio" ng-model="user.class" name="class" #class value="6" class="form-check-input">Class 6 &nbsp;
+                              </label>
+                              <label for="inline-radio2" class="form-check-label ">
+                                <input type="radio" ng-model="user.class" name="class" #class value="9" >Class 9 &nbsp;
+                              </label>
+                             
+                            </div>
+                          </div>
+                      </div> -->
+
+
+                      <div class="row form-group">
+                          <div class="col col-md-3"><label class=" form-control-label">Admission for Class *<br> कक्षा के लिए प्रवेश</label></div>
+                          <div class="col-12 col-md-4">
+                            <select id="center1" name="center1"  class="form-control" ng-model="user.studentClass"#class>
+                              <option value="0">Class</option>
+                              <option value="6">Class 6</option>
+                              <option value="9">Class 9</option>
+                              
+                            </select>
+                          </div>
+
+                        </div>
+          
+            <div class="row form-group" >
+                          <div class="col col-md-3"><label for="text-input" class=" form-control-label">Date of Birth *<br> जन्म तिथि</label></div>
+                          <div class="col-12 col-md-4"> 
+                            <input type="date" max="2008-07-01" min="2001-01-01" data-date-inline-picker="true" style="text-transform:uppercase"[(ngModel)]="user.dob" name="dob" id="dob" ngControl="dob" 
+                            dob="ngForm" #dob  name="dob" id="dob" class="form-control" ></div>
+
+            </div>
+            
+            <div class="row form-group" >
+                          <div class="col col-md-3"><label for="text-input" class=" form-control-label"></label></div>
+                          <div class="col-12 col-md-6"><strong>Class-6:</strong> The Boys should be between 10 to 11 years as on "01/07/2019"<br>
+<strong>Class-9:</strong> The Boys should be between 13 to 14 years as on "01/07/2019"</div>
+                        </div>
+
+            
+            
+            <div class="row form-group">
+                          <div class="col col-md-3"><label for="email-input" class=" form-control-label">Enter Email Id *<br>ई-मेल आई0डी0</label></div>
+                          <div class="input-group col-12 col-md-6">
+                              <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+                              <input type="text" onblur="validateEmail(this);" id="email" [(ngModel)]="user.email" name="email" ngControl="email" 
+                              email="ngForm" placeholder="Email" #email class="form-control"><small class="help-block form-text">All Information & Result Emails will be sent on this Email ID / सभी सूचना और परिणाम इस ई-मेल आई0डी0 पर भेजे जाएंगे</small>
+                            </div>
+
+                            
+                        </div>
+            
+            <div class="row form-group">
+                        
+                         <div class="col col-md-3">
+              <label for="email-input" class=" form-control-label">Enter Mobile Number *<br> मोबाईल न0</label>	</div>						
+              <div class="input-group col-12 col-md-6">
+                              <div class="input-group-addon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                              <input type="text" id="mobile" [(ngModel)]="user.mobile" name="mobile" ngControl="phone" 
+                              phone="ngForm" placeholder="Phone"#phone maxlength="10" class="form-control" onkeypress="return isNumber(event)"><small class="help-block form-text">All Information & Result SMS will be sent on this Number/ सभी सूचना और परिणाम इस मोबाईल न0 पर भेजे जाएंग</small>
+                            </div>
+            
+                        </div>
+
+
+
+            
+            <div class="row form-group">
+                          <div class="col col-md-2"><label class=" form-control-label">Complete Postal Address *</label></div>
+                         
+                            <div class="col col-md-10">
+                    
+                    
+                      <div class="form-group">
+          <div class="form-group"><label for="street"class=" form-control-label">Street/Block address * / गली / ब्लॉक पता</label><input type="text" id="block" [(ngModel)]="user.block" name="block" ngControl="pstreet" 
+            pstreet="ngForm" #pstreet   id="block"  name="block" placeholder="Enter street name" style="text-transform:uppercase" class="form-control"></div>
+                      <div class="row form-group">
+                        <div class="col-4">
+                          <div class="form-group"><label for="city" class=" form-control-label">City * / शहर</label><input type="text" id="city" [(ngModel)]="user.city" name="city" ngControl="pcity" 
+                            pcity="ngForm" #pcity  id="city"   name="city" style="text-transform:uppercase" placeholder="Enter your City" class="form-control" onkeypress="return onlyAlphabets(event,this);"></div>
+            
+                        </div>
+                        <div class="col-4">
+                          <div class="form-group"><label for="postal-code"  class=" form-control-label">State * / राज्य</label><input type="text" id="state" [(ngModel)]="user.state" name="state" ngControl="pstate" 
+                            pstate="ngForm" #pstate  id="state" name="state"  style="text-transform:uppercase" placeholder="Enter your State" class="form-control" onkeypress="return onlyAlphabets(event,this);"></div>
+                        </div>
+             <div class="col-4">
+                          <div class="form-group"><label for="city" class=" form-control-label">Pin Code * / पिनकोड</label><input type="text"id="pincode" [(ngModel)]="user.pincode" name="pincode" ngControl="ppincode" 
+                            ppincode="ngForm" #ppincode  id="pincode" name="pincode" placeholder="Enter your Pin Code" class="form-control" onkeypress="return isNumber(event)" maxlength="6"></div>
+            
+                        </div>
+                      </div>
+                      
+                    
+                  </div>
+                         
+                      </div>
+          </div>
+          
+
+          <div class="row form-group">
+            <div class="col col-md-2"><label class=" form-control-label">Complete Permanent Address * </label></div>
+           
+              <div class="col col-md-10">
+      
+      
+        <div class="form-group">
+<div class="form-group"><label for="street" class=" form-control-label">Street/Block address */ गली / ब्लॉक पता</label><input type="text"  id="permanentBlock" [(ngModel)]="user.permanentBlock" name="permanentBlock" ngControl="cstreet" 
+  cstreet="ngForm" #cstreet  name="permanentBlock" placeholder="Enter street name" style="text-transform:uppercase" class="form-control"></div>
+        <div class="row form-group">
+          <div class="col-4">
+            <div class="form-group"><label for="city"  class=" form-control-label">City * / शहर</label><input type="text" id="permanentCity" [(ngModel)]="user.permanentCity" name="permanentCity" ngControl="ccity" 
+              ccity="ngForm" #ccity id="permanentCity"  name="permanentCity" style="text-transform:uppercase" placeholder="Enter your City" class="form-control" onkeypress="return onlyAlphabets(event,this);"></div>
+
+          </div>
+          <div class="col-4">
+            <div class="form-group"><label for="postal-code" class=" form-control-label">State */ राज्य</label><input type="text"id="permanentState" [(ngModel)]="user.permanentState" name="permanentState" ngControl="cstate" 
+              cstate="ngForm" #cstate id="permanentState"  name="permanentState" style="text-transform:uppercase" placeholder="Enter your State" class="form-control" onkeypress="return onlyAlphabets(event,this);"></div>
+          </div>
+<div class="col-4">
+            <div class="form-group"><label for="city" class=" form-control-label">Pin Code * / पिनकोड</label><input type="text"id="permanentPincode" [(ngModel)]="user.permanentPincode" name="permanentPincode" ngControl="cpincode" 
+              cpincode="ngForm" #cpincode id="permanentPincode"  name="permanentPincode" placeholder="Enter your Pin Code" class="form-control" onkeypress="return isNumber(event)" maxlength="6"></div>
+
+          </div>
+        </div>
+        
+      
+    </div>
+           
+        </div>
+</div>
+
+
+<div class="row form-group">
+<div class="col col-md-3"></div>
+
+  <div class="col col-md-10">
+
+<div class="form-group">
+          <div class="row form-group">
+            <div class="col-4">
+              <div class="form-group"><label for="height" class=" form-control-label">Height *</label><input type="text" id="height" [(ngModel)]="user.height" name="height" ngControl="height" 
+                height="ngForm" #height  id="height"  name="height" style="text-transform:uppercase" placeholder="Height in CM" class="form-control" onkeypress="return isNumber(event)"></div>
+
+            </div>
+            <div class="col-4">
+              <div class="form-group"><label for="weight" class=" form-control-label">Weight *</label><input type="text" id="weight" [(ngModel)]="user.weight" name="weight" ngControl="weight" 
+                weight="ngForm" #weight   id="weight"  name="weight" style="text-transform:uppercase" placeholder="Weight in Kg" class="form-control" onkeypress="return isNumber(event)"></div>
+            </div>
+          <div class="col-4">
+              <div class="form-group">
+                <label for="blood_group" class=" form-control-label">Blood Group *</label>
+               
+              
+                <select id="center1" name="center1"  class="form-control" id="bloodGroup" [(ngModel)]="user.bloodGroup" name="bloodGroup" #bloodgroup>
+                    <option value="0">Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    
+                  </select>
+              
+              </div>
+
+            </div>
+           
+
+
+          </div>
+          
+        
+      </div>
+    </div>
+  </div>
+          
+          
+    
+
+                      <div class="row form-group">
+                          <div class="col col-md-3"><label class=" form-control-label">Select the Category * <br> कैटेगरी चुनें</label></div>
+                          <div class="col-12 col-md-4">
+                            <select id="category" name="category"  class="form-control" ng-model="user.category"#category>
+                              <option value="0">Category</option>
+                              <option value="1">JCOs & OR(General/OBC)/ जे0सी0ओ/ओ0आर (सामान्य /ओ0बीे0सी)</option>
+                              <option value="2">JCOs & OR(SC)/ जे0सी0ओ/ओ0आर (अनुसूचित जाति)</option>
+                              <option value="3">JCOs & OR(ST) / जे0सी0ओ/ओ0आर (अनुसूचित जनजाति)</option>
+                              <option value="4">KIA - Killed in Action /  लडाई में शहीद</option>
+                              <option value="5">Civilian/Officer(SC) / सिविलियन/ओफीसर (अनुसूचित जाति)</option>
+                              <option value="6">Civilian/Officer(SC) / सिविलियन/ओफीसर (अनुसूचित जाति)</option>
+                              <option value="7">Civilian/Officer(ST) / 	सिविलियन/ओफीसर (अनुसूचित जनजाति)</option>
+                              
+                            </select>
+                          </div>
+
+                        </div>
+          
+
+
+
+
+
+
+          <div class="row form-group">
+                          <div class="col col-md-3"><label for="select" class=" form-control-label">Select Three Exam Centre Preferences * <br>तीन परीक्षा केंद्र प्राथमिकताएं चुनें</label></div>
+                          <div class="col-12 col-md-4">
+                            <select id="center1" [(ngModel)]="user.center1" name="center1"  class="form-control" #center1>
+                              <option value="0">1st Choice</option>
+                              <option value="1">Ambala</option>
+                              <option value="2">Bhatinda</option>
+                              <option value="3">Bhopal</option>
+              <option value="4">Chandimandir</option>
+              <option value="4">Chennai</option>
+              <option value="6">Delhi</option>
+              <option value="7">Dimapur</option>
+              <option value="8">Jaipur</option>
+              <option value="9">Jalandhar</option>
+              <option value="10">Jammu</option>
+              <option value="11">Kolkata</option>
+              <option value="12">Leh</option>
+              <option value="13">Lucknow</option>
+              <option value="14">Mathura</option>
+              <option value="15">RMS Ajmer</option>
+              <option value="16">RMS Bangalore</option>
+              <option value="17">RMS Bangalore</option>
+              <option value="18">RMS Chail</option>
+              <option value="19">RMS Dholpur</option>
+              <option value="20">Nagrota</option>
+              <option value="21">Pune</option>
+              <option value="22">Siliguri</option>
+              <option value="23">Srinagar</option>
+              <option value="24">Tezpur</option>
+              <option value="25">Udhampur</option>
+              <option value="26">Yol Camp</option>
+                            </select>
+                          </div>
+
+                        </div>
+            
+            <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                        
+            <div class="col-12 col-md-4">
+              <select  id="center2" [(ngModel)]="user.center2" name="center2" class="form-control" #center2>
+                <option value="0">2nd Choice</option>
+                <option value="1">Ambala</option>
+                <option value="2">Bhatinda</option>
+                <option value="3">Bhopal</option>
+<option value="4">Chandimandir</option>
+<option value="4">Chennai</option>
+<option value="6">Delhi</option>
+<option value="7">Dimapur</option>
+<option value="8">Jaipur</option>
+<option value="9">Jalandhar</option>
+<option value="10">Jammu</option>
+<option value="11">Kolkata</option>
+<option value="12">Leh</option>
+<option value="13">Lucknow</option>
+<option value="14">Mathura</option>
+<option value="15">RMS Ajmer</option>
+<option value="16">RMS Bangalore</option>
+<option value="17">RMS Bangalore</option>
+<option value="18">RMS Chail</option>
+<option value="19">RMS Dholpur</option>
+<option value="20">Nagrota</option>
+<option value="21">Pune</option>
+<option value="22">Siliguri</option>
+<option value="23">Srinagar</option>
+<option value="24">Tezpur</option>
+<option value="25">Udhampur</option>
+<option value="26">Yol Camp</option>
+              </select>
+                          </div>
+            
+                        </div>
+            <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                          <div class="col-12 col-md-4">
+            
+                            <select id="center3" [(ngModel)]="user.center3" name="center3" class="form-control" #center3>
+                              <option value="0">3rd Choice</option>
+                              <option value="1">Ambala</option>
+                              <option value="2">Bhatinda</option>
+                              <option value="3">Bhopal</option>
+              <option value="4">Chandimandir</option>
+              <option value="4">Chennai</option>
+              <option value="6">Delhi</option>
+              <option value="7">Dimapur</option>
+              <option value="8">Jaipur</option>
+              <option value="9">Jalandhar</option>
+              <option value="10">Jammu</option>
+              <option value="11">Kolkata</option>
+              <option value="12">Leh</option>
+              <option value="13">Lucknow</option>
+              <option value="14">Mathura</option>
+              <option value="15">RMS Ajmer</option>
+              <option value="16">RMS Bangalore</option>
+              <option value="17">RMS Bangalore</option>
+              <option value="18">RMS Chail</option>
+              <option value="19">RMS Dholpur</option>
+              <option value="20">Nagrota</option>
+              <option value="21">Pune</option>
+              <option value="22">Siliguri</option>
+              <option value="23">Srinagar</option>
+              <option value="24">Tezpur</option>
+              <option value="25">Udhampur</option>
+              <option value="26">Yol Camp</option>
+                            </select>
+
+                        </div>
+            </div>
+            
+            
+            <div class="row form-group">
+                          <div class="col col-md-3"><label for="select" class=" form-control-label">Select the RMS School for Admission preferences * <br>राष्ट्रीय मिलिट्री स्कूल का चुनाव जिसमें प्रवेश के इच्छुक हैं | सभी पांच अलग स्कूल अपनी वरीयता के क्रमानुसार चुनें।</label></div>
+                          <div class="col-s col-sm-4">
+                            <select id="schoolPrefrences1" [(ngModel)]="user.schoolPrefrences1" name="schoolPrefrences1" class="form-control" #rmsschool1 >
+                              <option value="0">1st Choice</option>
+                              <option value="1">Rashtriya Military School, Chail</option>
+                              <option value="2">Rashtriya Military School, Ajmer</option>
+                              <option value="3">Rashtriya Military School, Belgaum</option>
+              <option value="4">Rashtriya Military School, Bangalore</option>
+              <option value="5">Rashtriya Military School, Bangalore</option>
+              <option value="6">Rashtriya Military School, Dholpur</option>
+              <option value="7">NOT APPLICABLE</option>
+            </select>
+                          </div>
+  
+                        </div>
+            
+             <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                         
+            <div class="col-12 col-md-4">
+              <select id="schoolPrefrences2" [(ngModel)]="user.schoolPrefrences2" name="schoolPrefrences2" class="form-control" #rmsschool2>
+                <option value="0">2nd Choice</option>
+                <option value="1">Rashtriya Military School, Chail</option>
+                <option value="2">Rashtriya Military School, Ajmer</option>
+                <option value="3">Rashtriya Military School, Belgaum</option>
+<option value="4">Rashtriya Military School, Bangalore</option>
+<option value="5">Rashtriya Military School, Bangalore</option>
+<option value="6">Rashtriya Military School, Dholpur</option>
+<option value="7">NOT APPLICABLE</option>
+</select>
+                          </div>
+
+                        </div>
+             <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                         
+            <div class="col-12 col-md-4">
+              <select id="schoolPrefrences3" [(ngModel)]="user.schoolPrefrences3" name="schoolPrefrences3" class="form-control"#rmsschool3>
+                <option value="0">3rd Choice</option>
+                <option value="1">Rashtriya Military School, Chail</option>
+                <option value="2">Rashtriya Military School, Ajmer</option>
+                <option value="3">Rashtriya Military School, Belgaum</option>
+<option value="4">Rashtriya Military School, Bangalore</option>
+<option value="5">Rashtriya Military School, Bangalore</option>
+<option value="6">Rashtriya Military School, Dholpur</option>
+<option value="7">NOT APPLICABLE</option>
+</select>
+                          </div>
+
+                        </div>
+             <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                         
+            <div class="col-12 col-md-4">
+              <select id="schoolPrefrences4" [(ngModel)]="user.schoolPrefrences4" name="schoolPrefrences4" class="form-control"#rmsschool4>
+                <option value="0">4th Choice</option>
+                <option value="1">Rashtriya Military School, Chail</option>
+                <option value="2">Rashtriya Military School, Ajmer</option>
+                <option value="3">Rashtriya Military School, Belgaum</option>
+<option value="4">Rashtriya Military School, Bangalore</option>
+<option value="5">Rashtriya Military School, Bangalore</option>
+<option value="6">Rashtriya Military School, Dholpur</option>
+<option value="7">NOT APPLICABLE</option>
+</select>
+                          </div>
+
+                        </div>
+             <div class="row form-group">
+                          <div class="col col-md-3"></div>
+                         
+            <div class="col-12 col-md-4">
+              <select id="schoolPrefrences5" [(ngModel)]="user.schoolPrefrences5" name="schoolPrefrences5" class="form-control"#rmsschool5>
+                <option value="0">5th Choice</option>
+                <option value="1">Rashtriya Military School, Chail</option>
+                <option value="2">Rashtriya Military School, Ajmer</option>
+                <option value="3">Rashtriya Military School, Belgaum</option>
+<option value="4">Rashtriya Military School, Bangalore</option>
+<option value="5">Rashtriya Military School, Bangalore</option>
+<option value="6">Rashtriya Military School, Dholpur</option>
+<option value="7">NOT APPLICABLE</option>
+</select>
+                          </div>
+
+                        </div>
+
+          <div class="row form-group">
+                          <div class="col col-md-3"><label for="select" class=" form-control-label">Select the Choice of Hospital for Medical Checkup *<br> हस्पताल का चुनाव जिसमें स्वास्थ जाँच करवानी हैं</label></div>
+                          <div class="col-12 col-md-4">
+                            <select id="medicalHospital" [(ngModel)]="user.medicalHospital" name="medicalHospital" class="form-control"#medical>
+                              <option value="0">Select</option>
+                              <option value="2">Southern Command, Pune</option>
+                              <option value="3">Central Command, Lucknow</option>
+              <option value="4">Western Command, Chandimandir</option>
+              <option value="5">Air Force, Bangalore</option>
+              <option value="6">Northern Command, C/o 56 APO</option>
+              <option value="7">MH Ahmedabad - Southern Command</option>
+              <option value="8">MH Jodhpur</option>
+              <option value="9">MH Kirkee</option>
+              <option value="10">MH Secunderabad</option>
+              <option value="11">MH Ambala</option>
+              <option value="12">MH Jalandhar</option>
+              <option value="13">159 (GH)</option>
+              <option value="14">Base Hospital, Delhi Cantt</option>
+              <option value="15">MH Barrackpore</option>
+              <option value="16">151 Base Hospital</option>
+              <option value="17">155 Base Hospital</option>
+              <option value="18">158 Base Hospital</option>
+              <option value="19">166 MH</option>
+              <option value="20">167 MH</option>
+              <option value="21">92 Base Hospital, C/O 56 APO</option>
+              <option value="22">150 Gen Hospital, C/O 56 APO</option>
+              <option value="23">MH Agra</option>
+              <option value="24">MH Allahabad</option>
+              <option value="25">MH Meerut</option>
+              <option value="26">MH Bareilly</option>
+                            </select>
+                          </div>
+            
+            
+                        </div>
+                       
+        <div class="row form-group">
+                          <div class="col col-md-3"><label for="select" class=" form-control-label">In which Rashtriya Military School
+your own Brother is studying * <br>आपका सगा भाई किस राष्ट्रीय मिलिट्री स्कूल में पढ़ता ह</label></div>
+                          <div class="col-s col-sm-4">
+                            <select id="brotherRms" [(ngModel)]="user.brotherRms" name="brotherRms" class="form-control" #brotherrms>
+                              <option value="0">Select</option>
+                              <option value="1">Rashtriya Military School, Chail</option>
+                              <option value="2">Rashtriya Military School, Ajmer</option>
+                              <option value="3">Rashtriya Military School, Belgaum</option>
+              <option value="4">Rashtriya Military School, Bangalore</option>
+              <option value="5">Rashtriya Military School, Bangalore</option>
+              <option value="6">Rashtriya Military School, Dholpur</option>
+              <option value="7">NOT APPLICABLE</option>
+            </select>
+                          </div>
+
+                        </div>
+            
+    
+                       
+                     
+                        <div class="row form-group">
+                          <div class="col col-md-3"><label for="file-input" class=" form-control-label">Upload Profile Photo*</label></div>
+                          <div class="col-12 col-md-3" style="height:20%;"><img id="output_image"/><br/>
+            <input type="file"  id="file-input" name="file-input" class="form-control-file" onchange="preview_image(event)">
+            </div>
+                        </div>
+            
+              <div class="row form-group">
+                          <div class="col col-md-3"><label for="file-input" class=" form-control-label">Upload Signature*</label></div>
+                          <div class="col-12 col-md-3" style="height:20%;"><img id="output_image1"/><br/>
+            <input type="file" id="file-input" name="file-input" class="form-control-file" onchange="preview_image1(event)">
+            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" style="background:red;">
+                               &nbsp; &nbsp;<input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1" class="form-check-input"> <strong class="card-title">Declaration by Parent/Guardian (माता पिता/संरक्षक द्वारा घोषणा पत्र)</strong>
+                            </div>
+                            <div class="card-body">
+                               
+                                    <h4 class="alert-heading"></h4>
+                                    <p>I hereby state that all particulars given above are true to the best of my knowledge and belief and no material information has been suppressed or withheld by me. I also agree to bind myself to submit to the school rules in force at present or amended from time to time, in all respects. I have read the prospectus and School Rules. I am also aware that if my son/ward if found using unfair means in the examination, he shall be debarred from the examination and his candidature shall be cancelled.</p>
+<p> मैं यह घोषणा करता हूँ कि ऊपर दिए गए सभी विवरण मेरी जानकारी के अनुसार सत्य तथा विश्वास योग्य है और कोई भी सूचना मेरे द्वारा छुपाई या दबाई नही गई है। मैं स्वंय को सभी संबन्धांे में वर्तमान तथा समय-समय पर होने वाले कोर्स में स्कूल के नियमों के लिए बंघित होने के लिए सहमत हूँं। मैं पाठयक्रम के विवरण तथा नियम को पढ़ चुका हूँं। मुझे यह जानकारी है कि अगर मेरा पुत्र नकल करता हुआ पाया गया तो उसकी परीक्षा रद्द कर दी जाऐगी।</p>
+                                    <hr>
+              <p>* All disputes subject to Delhi jurisdiction. </p>
+              <p>
+* सभी विवाद दिल्ली अधिकार क्षेत्र के अधीन हैं।</p>
+                             
+
+                               
+                                
+                            </div>
+                        </div>
+       <div class="modal-footer">
+        
+          <input type="button" (click)="createUser()" class="btn btn-success btn-flat m-b-30 m-t-30"  value="Preview" data-toggle="modal" data-target="#dialog-example" />
+       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </form>
+
+                    
+
+
+                    </div>
+                  
+                  </div>
+                 
+                </div>
+
+
+                <div class="col-lg-3">
+                   
+                    <div class="card-header" style="background: red;">
+                      <strong>Read the Instructions GIVEN BELOW before filling this Form<br/>
+कृपया इस फार्म को भरने से पहले नीचे दिये गऐ निर्देश को ध्यानपूर्वक पढ़े।
+</strong>
+                    </div>
+          <br>
+          <!--Accordion wrapper-->
+<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+<!-- Accordion card -->
+<div class="card">
+
+  <!-- Card header -->
+  <div class="card-header" role="tab" id="headingOne1">
+    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+      <h5 class="mb-0">
+        Important Instructions<i class="fa fa-angle-down rotate-icon"></i>
+      </h5>
+    </a>
+  </div>
+
+  <!-- Card body -->
+  <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+    <div class="alert alert-success" >
+                    
+                                          <p>
+                    <ol>
+                    <li>Fill all the compulsory fields.</li>
+                    <li>Mention All Three different Examination Centre choices. </li>
+                    <li>Write complete Postal Address alongwith Parent's / Guardian's name. </li>
+                    <li>Upload Scanned Documents: Remember, before this step you should must have the relevant scanned documents. (It is suggested to scan documents from your originals). These include:
+                      <ul>
+                      <li>Scanned Photograph (less than 400 KB)</li>
+                      <li>Scanned Signature (less than 400 KB)</li>
+                      <li>Scanned copy of Age Proof.</li>
+                      <li>Scanned Copy of Category Certificate, if SC/ST/OBC. (less than 400 KB)</li>
+                      </ul>											</li>
+                    <li>Please upload clearly visible scan copies of documents. Form with unclear scanned copies/pictures shall be rejected without intimation. </li>
+                    <li>Application form will become inactive after the last date of submission of the Application.</li>
+                    <li>Duplicate / Multiple Application Forms submission by a Candidate will be rejected without intimation. </li>
+                    <li>Duplicate / Multiple Application Forms submission by a Candidate will be rejected without intimation. </li>
+                      <li>The Examination will be held on 17 DEC 2018 (Sunday). </li>	
+                    </ol>
+                    
+
+                                      
+                    </div>
+  </div>
+
+</div>
+<!-- Accordion card -->
+
+<!-- Accordion card -->
+<div class="card">
+
+  <!-- Card header -->
+  <div class="card-header" role="tab" id="headingTwo2">
+    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+      <h5 class="mb-0">महत्वपूर्ण निर्देश<i class="fa fa-angle-down rotate-icon"></i>
+      </h5>
+    </a>
+  </div>
+
+  <!-- Card body -->
+  <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+    <div class="alert alert-success" style="padding: 30px;">
+<ol>        
+<li>कृपया इस फार्म को भरने से पहले निेर्देश को ध्यानपूर्वक पढ़े। </li>
+<li>खानो में लिखने के लिए काले/ नीले पेन का प्रयोग करे तथा गोले को पूरी तरह से भरे। </li>
+<li>सुनिश्चित करे कि सभी काॅलम जो भरने योग्य हो बडे तथा साफ अक्षरों में पूरी तरह से भरे हो।</li>
+<li>अपनी पसंद के तीन अलग-अलग परीक्षा केंद्र को भरे। </li>
+<li>अपनी नवीनतम पासपोर्ट फोटोग्राफ ;3ण्5बउ ग 4ण्5बउद्ध दी हुई जगह पर सही प्रकार से चिपकायेए स्टेपल न करे। </li>
+<li>अपना पूरा पता अपने माता-पिता के नाम सहित लिखे। </li>
+<li>आवेदन प्रत्र को मूल रुप में फोटाकापी नही भरकर अपनी पसंद वाले राष्ट्रीय मिलिट्री स्कूल में ही जमा करे। </li>
+<li>अधूरा भरा हुआ ध् बिना हस्ताक्षर ध् गलत भरा हुआ ध् बिना फोटोग्राफ के फॅार्म बिना किसी सूचना के अस्वीकार कर दिया जाएगा। </li>
+<li>आवेदन प्रत्र पहुँचने की अंतिम तिथि 15 अकटूबर, 2018 है। </li>
+<li>अतिम तारीख के बाद प्राप्त हुआ आवेदन पत्र बिना किसी सूचना के अस्वीकृत कर दिया जाएगा। </li>
+<li>एक उम्मीदवार के एक से अधिक आवेदन पत्र बिना किसी सूचना के अस्वीकृत कर दिया जाएगा। </li>
+<li>लिखित परीक्षा 15 दिसंबर, 2018 रविवार को आयोजित की जाएगी।</li>
+</ol>
+    </div>
+  </div>
+
+</div>
+
+<!-- Accordion card -->
+
+<!-- Accordion card -->
+<div class="card">
+
+  <!-- Card header -->
+  <div class="card-header" role="tab" id="headingThree3">
+    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+      <h5 class="mb-0">Category Types /  कैटेगरी के प्रकार<i class="fa fa-angle-down rotate-icon"></i>
+      </h5>
+    </a>
+  </div>
+
+  <!-- Card body -->
+  <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+    <div class="alert alert-success" style="padding: 30px;">
+      <p class="mb-0" style="color: black !important;"><strong>Category 1 - JCOs & OR (General/OBC) :</strong> Serving or Retired JCOs and OR of Army or equivalent in Air Force / Navy who do not belong to SC / ST category shall apply in this category.<br>&nbsp;&nbsp;जे0सी0ओ/ओ0आर (सामान्य /ओ0बीे0सी) : सेना के सेवारत एवं रिटायर्ड जे सी ओ एवं अन्य रैन्क अथवा एयर फोर्स एवं नेवी जो अनुसूचित जाति/अनुसूचित जन जाति कैटेगरी में नहीं आते हैं वे वार्ड इस केटेगरी में आवेदन करेगें। <br>
+<br/><strong>Category 2 - JCOs & OR (SC) :</strong> Serving or Retired JCOs and OR of Army or equivalent in Air Force / Navy who belong to SC category shall apply in this category.<br>&nbsp;&nbsp;जे0सी0ओ/ओ0आर (अनुसूचित जाति) : सेना के सेवारत एवं रिटायर्ड जे सी ओ एवं अन्य रैन्क अथवा एयर फोर्स एवं नेवी जो अनुसूचित जाति कैटेगरी में आते हैं वे वार्ड इस केटेगरी में आवेदन करेगें।<br/>
+
+<br/><strong>Category 3 - JCOs & OR (ST) :</strong> Serving or Retired JCOs and OR of Army or equivalent in Air Force / Navy who belong to ST  category shall apply in this category.<br>&nbsp;&nbsp;जे0सी0ओ/ओ0आर (अनुसूचित जनजाति) : सेना के सेवारत एवं रिटायर्ड जे सी ओ एवं अन्य रैन्क अथवा एयर फोर्स एवं नेवी जो अनुसूचित जन जाति कैटेगरी में आते हैं वे वार्ड इस केटेगरी में आवेदन करेगें।<br/>
+
+<br/><strong>Category 4 - KIA (Killed in Action) :</strong> Sons of War Widows are eligible under this category.<br>&nbsp;&nbsp;के.आई.ए. (युद्ध में शहीद) : युद्ध विधवाओं के पुत्र इस कैटेगरी में आवेदन कर सकते हैं।<br/>
+
+<br/><strong>Category 5 - Civilian/Officer (General / OBC) :</strong> All wards of Civilians/Officers who do not belong to SC / ST category shall apply under this category.<br>&nbsp;&nbsp;सिविलियन/आॅफीसर (सामान्य /ओ0बीे0सी) : सभी सिविलियनध्आॅफीसर के वार्ड जो अनुसूचित जाति/अनुसूचित जन जाति कैटेगरीमें नहीं आते हैं वे वाड इस कैटेगरी में आवेदन कर सकते हैं।<br/>
+
+<br/><strong>Category 6 - Civilian/Officer (SC) :</strong> All wards of Civilians/Officers who belong to SC category shall apply under this category.<br>&nbsp;&nbsp;सिविलियन/आॅफीसर (अनुसूचित जाति) : सभी सिविलियनध्आॅफीसर के वार्ड जो अनुसूचित जाति कैटेगरी में आते हैं वे वार्ड इस कैटेगरी में आवेदन कर सकते हैं।<br/>
+
+<br/><strong>Category 7 - Civilian/Officer (ST) :</strong> All wards of Civilians/Officers who belong to ST category shall apply under this category.<br>&nbsp;&nbsp;सिविलियन/आॅफीसर (अनुसूचित जनजाति) : सभी सिविलियनध्आॅफीसर के वार्ड जो अनुसूचित जन जाति कैटेगरी में आते हैं वे वार्ड इस कैटेगरी में आवेदन कर सकते हैं।<br/>
+<br><strong>NOTE: (नोट)</strong><br>
+- Wards of Para Military Force,Police Personnel and Defence Civilians WILL  apply under Civilian/officer category only. <br>पैरा मिलिट्री फोर्स पुलिस पर्सनल एवं डिफेन्स सिविलियन के वार्ड सिविलियन आॅफीसर कैटेगरी में आवेदन करेगें।<br>
+<br>- All wards of Serving & Retired Officers of Army, Air Force and Navy shall apply under Civilian/officer category. <br>आर्मीएवायुसेना एवं नैासेना के सेवारत एवं रिटायर्ड आफीसर्स के सभी वार्ड सिविलियन आॅफीसर कैटेगरी में आवेदन करेगें। <br>
+
+</p> 
+    </div>
+  </div>
+
+</div>
+<!-- Accordion card -->
+
+
+
+</div>
+<!-- Accordion wrapper -->
+          
+                    
+
+                </div>
+
+
+              </div>
+
+
+          </div><!-- .animated -->
+      </div><!-- .content -->
+
+
+  </div><!-- /#right-panel -->
+
+  <!-- Right Panel -->
+ <!-- Button trigger modal -->
+  
+  <div id="dialog-example" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="label-dialog-example" style="display: none;">
+    <div class="modal-dialog full-screen" role="document">
+      <div class="modal-content">
+  
+          <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Preview Form</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <div class="modal-body">
+            <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-header"><strong>Preview</strong><small> Form</small></div>
+                  <div class="card-body card-block">
+                    <div class="form-group"><label for="name" class=" form-control-label">Name </label><input type="text" style="text-transform:uppercase" id="name" value=" {{name.value}}"  disabled class="form-control"></div>
+                    <div class="form-group"><label for="fathername" class=" form-control-label">Father Name</label><input  style="text-transform:uppercase" type="fathername" id="fathername" value="{{fathername.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="mothername" class=" form-control-label">Mother Name</label><input style="text-transform:uppercase" type="mothername" id="street" value=" {{mothername.value}}" placeholder="Enter street name" class="form-control"></div>
+                    
+                    <div class="form-group"><label for="class" class=" form-control-label">Class</label><input type="text" style="text-transform:uppercase" id="company"value=" {{class.value}}"  class="form-control"></div>
+                    <div class="form-group"><label for="dob" class=" form-control-label">D/O/B</label><input type="text" style="text-transform:uppercase" id="vat" value=" {{dob.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="email" class=" form-control-label">Email</label><input type="text" style="text-transform:uppercase" id="street"value=" {{email.value}}" placeholder="" class="form-control"></div>
+                    
+                    <div class="form-group"><label for="mobile" class=" form-control-label">Mobile</label><input type="text" style="text-transform:uppercase" id="company"value=" {{phone.value}}"  class="form-control"></div>
+                    
+                    <div class="form-group"><label for="pstreet" class=" form-control-label">Postal Street</label><input type="text" style="text-transform:uppercase" id="vat" value=" {{pstreet.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="pcity" class=" form-control-label">Postal City</label><input type="text" style="text-transform:uppercase" id="street"value=" {{pcity.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="pstate" class=" form-control-label">Postal State</label><input type="text" style="text-transform:uppercase" id="company"value=" {{pstate.value}}"  class="form-control"></div>
+                    <div class="form-group"><label for="ppincode" class=" form-control-label">Postal Pincode</label><input type="text" style="text-transform:uppercase" id="vat" value=" {{ppincode.value}}" placeholder="" class="form-control"></div>
+
+                    <div class="form-group"><label for="street" class=" form-control-label">Permanent Street</label><input type="text" style="text-transform:uppercase" id="street"value=" {{cstreet.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="company" class=" form-control-label">Permanent City</label><input type="text" style="text-transform:uppercase" id="company"value=" {{ccity.value}}"  class="form-control"></div>
+                    <div class="form-group"><label for="vat" class=" form-control-label">Permanent State</label><input type="text" style="text-transform:uppercase" id="vat"value=" {{cstate.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="street" class=" form-control-label">Permanent Pincode</label><input type="text" style="text-transform:uppercase" id="street"value=" {{cpincode.value}}" placeholder="" class="form-control"></div>
+                    
+
+                    <div class="form-group"><label for="height" class=" form-control-label">Height</label><input type="text" style="text-transform:uppercase" id="height"value=" {{height.value}}"  class="form-control"></div>
+                    <div class="form-group"><label for="weight" class=" form-control-label">Weight</label><input type="text" style="text-transform:uppercase" id="weight"value=" {{weight.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="bloodgroup" class=" form-control-label">Blood Group</label><input type="text" style="text-transform:uppercase" value=" {{bloodgroup.value}}" id="bloodgroup" placeholder="" class="form-control"></div>
+                    
+                    <div class="form-group"><label for="category" class=" form-control-label">Category</label><input type="text"  value=" {{category.value}}" id="category" placeholder="" class="form-control"></div>
+                    
+
+                    <div class="form-group"><label for="center1" class=" form-control-label">Center Choice 1</label><input type="text" id="center1" value=" {{center1.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="center2" class=" form-control-label">Center Choice 2</label><input type="text" id="center2"value=" {{center2.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="center3" class=" form-control-label">Center choice 3</label><input type="text" id="center3"value=" {{center3.value}}"  class="form-control"></div>
+
+                    <div class="form-group"><label for="rmsschool1" class=" form-control-label">Rms Choice 1</label><input type="text" id="rmsschool1" value=" {{rmsschool1.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="rmsschool2" class=" form-control-label">Rms Choice 2</label><input type="text" id="rmsschool2" value=" {{rmsschool2.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="rmsschool3" class=" form-control-label">Rms Choice 3</label><input type="text" id="rmsschool3"value=" {{rmsschool3.value}}" placeholder="" class="form-control"></div>
+                    <div class="form-group"><label for="rmsschool3" class=" form-control-label">Rms Choice 4</label><input type="text" id="rmsschool3"value=" {{rmsschool4.value}}"  class="form-control"></div>
+                    <div class="form-group"><label for="rmsschool5" class=" form-control-label">Rms Choice 5</label><input type="text" id="rmsschool5" value=" {{rmsschool5.value}}" placeholder="" class="form-control"></div>
+
+                    <div class="form-group"><label for="medical" class=" form-control-label">Medical Hospital Choice</label><input type="text" id="medical" value=" {{medical.value}}" placeholder="" class="form-control"></div>
+
+                    <div class="form-group"><label for="brotherrms" class=" form-control-label">Brother Rms</label><input type="text"value=" {{brotherrms.value}}"  id="brotherrms" placeholder="" class="form-control"></div>
+                  </div>
+                </div>
+              </div>        
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" (click)="createUser()" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
